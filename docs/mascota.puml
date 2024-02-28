@@ -1,0 +1,66 @@
+@startuml
+
+class Mascota 
+{
+    -juguete:Juguete
+    -dinero:Dinero
+    -accesorio:Accesorio
+    -casa:Casa
+    +Comer(Alimento)
+    +Juegar(Juguete)
+    +Usar(Ropa)
+    +Manejar(Carro)
+    +Duermir(Dormitorio)
+    +Hablar(Microfono)
+}
+class Alimento 
+class Casa
+class Carro 
+class Juguete
+class Pelota
+class Porteria  
+class Bebida  
+class Accesorio 
+class Ropa 
+class Jardin 
+class Microfono
+class Peinado
+class Dinero 
+class Baño 
+{
+    -
+    +Regadera(Agua)
+
+}
+class Dormitorio 
+class Lampara 
+class Planta
+class Cocina 
+class Ducha
+class Sala 
+class Jabon 
+
+Baño "1" *-- "1" Jabon
+Mascota "1" o-- "1" Sala 
+Sala "1" *-- "1" Microfono 
+Baño *-- Ducha
+Cocina "1" *-- "1..." Alimento
+Planta "3...4" --* "1" Jardin
+Mascota "1" o-- "1" Dormitorio
+Lampara "1" --* "1" Dormitorio
+Mascota "1" o-- "1" Baño
+Mascota o-- Dinero 
+Peinado --|> Accesorio
+Microfono --|> Juguete  
+Alimento --o Mascota 
+Mascota "1" o-- "1" Juguete
+Pelota --|> Juguete
+Carne --|> Alimento
+Porteria --|> Juguete 
+Carro --|> Juguete 
+Bebida --|> Alimento 
+Accesorio --o Mascota 
+Ropa --|> Accesorio
+Mascota o-- Jardin 
+
+@enduml
