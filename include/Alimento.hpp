@@ -8,9 +8,9 @@ public:
         this->Energia=Energia;
     }
 
-}
+
 int ExtraerEnergia(){
     return this->Energia;
 }
-~Alimento(){}
+    ~Alimento() {}
 };
